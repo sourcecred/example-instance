@@ -141,5 +141,9 @@ SC_DIR=`pwd`
 alias sourcecred='node ${SC_DIR}/bin/sourcecred.js'
 ```
 
+# Publishing on GitHub pages
 
+Once you've got the instance configured to your satisfaction, you can publish
+it on GitHub pages by opening the repository settings, scrolling to GitHub
+pages, and selecting to publish from the master branch.
 
