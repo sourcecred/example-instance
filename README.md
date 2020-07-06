@@ -120,26 +120,22 @@ You can also remove its `config/plugins/OWNER/NAME` directory for good measure.
 
 # Forking off this instance
 
-Using this instance as a starting point, you can update the config to include just the plugins you want, pointing at the data you care about.
-Then, run the following commands to update it:
+Using this instance as a starting point, you can update the config to include
+just the plugins you want, pointing at the data you care about.
 
-- `sourcecred load`
-- `sourcecred graph`
-- `sourcecred score`
+Get [Yarn] and then run `yarn` to install SourceCred and dependencies.
+
+Then, run the following commands to update the instance:
+
+- `yarn load`
+- `yarn graph`
+- `yarn score`
 
 If you want to update the frontend, you can do so via:
-- `sourcecred site`
 
-Note that at present SourceCred is not published to NPM, so you'll need to do this by building from source:
+- `yarn site`
 
-```
-git clone https://github.com/sourcecred/sourcecred.git
-cd sourcecred
-yarn
-yarn build
-SC_DIR=`pwd`
-alias sourcecred='node ${SC_DIR}/bin/sourcecred.js'
-```
+[Yarn]: https://classic.yarnpkg.com/
 
 # Publishing on GitHub pages
 
