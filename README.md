@@ -135,6 +135,10 @@ If you want to update the frontend, you can do so via:
 
 - `yarn site`
 
+If you want to clear the cached data to start from a clean slate, you can do so via:
+
+- `yarn clean` 
+
 [Yarn]: https://classic.yarnpkg.com/
 
 # Publishing on GitHub pages
