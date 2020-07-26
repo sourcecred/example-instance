@@ -135,9 +135,18 @@ If you want to update the frontend, you can do so via:
 
 - `yarn site`
 
-If you want to clear the cached data to start from a clean slate, you can do so via:
+If you want to clear the cached data, you can do so via:
 
 - `yarn clean` 
+
+Running `yarn clean` is a good idea if any plugins fail to load.
+
+If you want to restart from a clean slate and remove all the generated graphs, you can do so via:
+
+- `yarn clean-all` 
+
+Run `yarn clean-all` if the `yarn graph` command fails due to a change in the config or breaking changes in a new version of SourceCred.
+**Warning**: If you don't have credentials for every plugin, you might not be able to regenerate parts of the graph.
 
 [Yarn]: https://classic.yarnpkg.com/
 

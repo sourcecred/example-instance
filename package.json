@@ -10,7 +10,8 @@
     "sourcecred": "0.7.0-beta-4"
   },
   "scripts": {
-    "clean": "rimraf cache output site",
+    "clean": "rimraf cache site",
+    "clean-all": "yarn clean && rimraf output",
     "load": "sourcecred load",
     "graph": "sourcecred graph",
     "score": "sourcecred score",
