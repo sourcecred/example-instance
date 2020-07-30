@@ -37,7 +37,12 @@ jobs:
         run: yarn score
 
       - name: Generate Frontend 🏗
-        run: yarn site
+        run: |
+          yarn site
+          cp -rf ./output ./site
+          cp -rf ./data ./site
+          cp -rf ./config ./site
+          cp -f ./sourcecred.json ./site
 
       - name: Copy CNAME if exists
         run: '(test -f CNAME && cp ./CNAME ./site) || echo CNAME does not exist, skipping step'
