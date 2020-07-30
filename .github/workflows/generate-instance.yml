@@ -37,10 +37,10 @@ jobs:
         run: yarn score
 
       - name: Generate Frontend 🏗
-        run: |
-          yarn site
-          cp -r ./output ./site
-          cp ./sourcecred.json ./site
+        run: yarn site
+
+      - name: Copy CNAME if exists
+        run: '(test -f CNAME && cp ./CNAME ./site) || echo CNAME does not exist, skipping step'
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.5.7
